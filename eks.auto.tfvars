@@ -1,1 +1,1 @@
-eks_cluster_name = ultra
+eks_cluster_name = "ultra"

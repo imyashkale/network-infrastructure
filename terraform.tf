@@ -10,7 +10,10 @@ terraform {
     bucket = "infrastructure-statefile"
     key    = "infrastructure/vpc/statefile"
     region = "ap-south-1"
+
+    dynamodb_table = "infrastructure-state-lock"
   }
+
 }
 
 provider "aws" {
