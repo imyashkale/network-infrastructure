@@ -34,6 +34,7 @@ This Terraform module creates a Virtual Private Cloud (VPC) in AWS using the `te
       // Tags
       tags     = local.tags
       vpc_tags = local.tags
+    
       public_subnet_tags = {
         Type = "Public"
       }
