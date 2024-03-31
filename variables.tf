@@ -75,3 +75,9 @@ variable "vpc_single_nat_gateway" {
   type        = bool
   default     = true
 }
+
+variable "eks_cluster_name" {
+  description = "EKS Cluster Name"
+  type        = string
+  default     = "ultra"
+}
