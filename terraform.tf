@@ -8,7 +8,7 @@ terraform {
 
   backend "s3" {
     bucket = "infrastructure-statefile"
-    key = "infrastructure/vpc/statefile"
+    key    = "infrastructure/vpc/statefile"
     region = "ap-south-1"
   }
 }

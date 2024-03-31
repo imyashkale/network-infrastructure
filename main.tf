@@ -2,7 +2,7 @@ module "vpc" {
   source  = "terraform-aws-modules/vpc/aws"
   version = "5.4.0"
 
-  // Foundation Details
+  // Details
   name            = local.name
   cidr            = var.vpc_cidr_block
   azs             = var.vpc_availability_zones
@@ -25,6 +25,7 @@ module "vpc" {
   # Tags
   tags     = local.tags
   vpc_tags = local.tags
+
   public_subnet_tags = {
     Type = "Public"
   }
@@ -35,6 +36,6 @@ module "vpc" {
     Type = "Private Datbase"
   }
 
-  # For Public Subnet Launched Instances
+  # For Public Subnet Launched Instances - to get the public IP
   map_public_ip_on_launch = true
 }
