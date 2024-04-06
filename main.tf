@@ -27,14 +27,14 @@ module "vpc" {
   vpc_tags = local.tags
 
   public_subnet_tags = {
-    Type                                            = "Public"
-    "kubernetes.io/role/elb"                        = 1
-    "kubernetes.io/cluster/${var.eks_cluster_name}" = "shared"
+    Type                                  = "Public"
+    "kubernetes.io/role/elb"              = 1
+    "kubernetes.io/cluster/${local.name}" = "shared"
   }
   private_subnet_tags = {
-    Type                                            = "Private"
-    "kubernetes.io/role/internal-elb"               = 1
-    "kubernetes.io/cluster/${var.eks_cluster_name}" = "shared"
+    Type                                  = "Private"
+    "kubernetes.io/role/internal-elb"     = 1
+    "kubernetes.io/cluster/${local.name}" = "shared"
   }
 
   # For Public Subnet Launched Instances - to get the public IP
