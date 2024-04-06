@@ -27,3 +27,8 @@ output "azs" {
   description = "AWS Availability Zones"
   value       = module.vpc.azs
 }
+
+output "vpc_arn" {
+  description = "The VPC ARN"
+  value = module.vpc.vpc_arn
+}
