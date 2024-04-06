@@ -30,5 +30,5 @@ output "azs" {
 
 output "vpc_arn" {
   description = "The VPC ARN"
-  value = module.vpc.vpc_arn
+  value       = module.vpc.vpc_arn
 }
