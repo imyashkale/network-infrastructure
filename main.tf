@@ -36,9 +36,6 @@ module "vpc" {
     "kubernetes.io/role/internal-elb"               = 1
     "kubernetes.io/cluster/${var.eks_cluster_name}" = "shared"
   }
-  database_subnet_tags = {
-    Type = "Private Datbase"
-  }
 
   # For Public Subnet Launched Instances - to get the public IP
   map_public_ip_on_launch = true
