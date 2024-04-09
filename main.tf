@@ -3,9 +3,11 @@ module "vpc" {
   version = "5.4.0"
 
   // Details
-  name            = local.name
-  cidr            = var.vpc_cidr_block
-  azs             = var.vpc_availability_zones
+  name = local.name
+  cidr = var.vpc_cidr_block
+  azs  = var.vpc_availability_zones
+
+  # Public & Private Subnets
   public_subnets  = var.vpc_public_subnets
   private_subnets = var.vpc_private_subnets
 
@@ -31,6 +33,7 @@ module "vpc" {
     "kubernetes.io/role/elb"              = 1
     "kubernetes.io/cluster/${local.name}" = "shared"
   }
+
   private_subnet_tags = {
     Type                                  = "Private"
     "kubernetes.io/role/internal-elb"     = 1
