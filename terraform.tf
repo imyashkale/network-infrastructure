@@ -6,10 +6,12 @@ terraform {
     }
   }
 
-  cloud {
-    organization = "ULTRA"
-    workspaces {
-      name = "networking-layer"
+  backend "remote" {  
+    cloud {
+      organization = "ULTRA"
+      workspaces {
+        name = "networking-layer"
+      }
     }
   }
 }
