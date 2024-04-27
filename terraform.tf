@@ -6,14 +6,10 @@ terraform {
     }
   }
 
-  backend "s3" {
-    bucket = "infrastructure-statefile"
-    key    = "infrastructure/vpc/statefile"
-    region = "ap-south-1"
-
-    dynamodb_table = "infrastructure-state-lock"
+  cloud {
+    organization = "ULTRA"
+    workspaces { name = "networking-layer" }
   }
-
 }
 
 provider "aws" {
