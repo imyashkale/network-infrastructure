@@ -8,7 +8,9 @@ terraform {
 
   cloud {
     organization = "ULTRA"
-    workspaces { name = "networking-layer" }
+    workspaces {
+      name = "networking-layer"
+    }
   }
 }
 
