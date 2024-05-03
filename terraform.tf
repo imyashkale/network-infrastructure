@@ -10,7 +10,7 @@ terraform {
     cloud {
       organization = "ULTRA"
       workspaces {
-        name = "networking-layer"
+        name = "network-infrastructure"
       }
     }
   }
